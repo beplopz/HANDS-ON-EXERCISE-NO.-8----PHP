@@ -1,0 +1,239 @@
+:root {
+    --bg: #f4efe6;
+    --surface: #fffaf4;
+    --surface-strong: #ffffff;
+    --text: #1e1b18;
+    --muted: #65584a;
+    --primary: #a44920;
+    --primary-dark: #7d3110;
+    --accent: #e7c9a9;
+    --line: #dfd0bf;
+    --success: #dff1e4;
+    --warning: #fff1cf;
+    --danger: #b42318;
+    --shadow: 0 16px 40px rgba(88, 57, 31, 0.12);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at top left, rgba(231, 201, 169, 0.6), transparent 28%),
+        linear-gradient(180deg, #f9f4ec 0%, var(--bg) 100%);
+}
+
+a {
+    color: var(--primary-dark);
+}
+
+.container {
+    width: min(1120px, calc(100% - 2rem));
+    margin: 0 auto;
+}
+
+.site-header {
+    padding: 2rem 0 1.5rem;
+}
+
+.brand-block {
+    background: linear-gradient(135deg, rgba(164, 73, 32, 0.95), rgba(125, 49, 16, 0.95));
+    color: #fffaf4;
+    padding: 2rem;
+    border-radius: 28px;
+    box-shadow: var(--shadow);
+}
+
+.eyebrow,
+.section-tag {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    margin-bottom: 0;
+    color: rgba(255, 250, 244, 0.86);
+}
+
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    background: rgba(255, 250, 244, 0.92);
+    color: var(--text);
+    padding: 0.8rem 1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(164, 73, 32, 0.15);
+}
+
+.page-shell {
+    padding-bottom: 3rem;
+}
+
+.hero-card,
+.content-card {
+    background: rgba(255, 250, 244, 0.94);
+    border: 1px solid var(--line);
+    border-radius: 28px;
+    padding: 1.6rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.mini-card {
+    background: var(--surface-strong);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    padding: 1rem;
+}
+
+.grid-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.stack-form {
+    display: grid;
+    gap: 1rem;
+}
+
+.narrow-card {
+    max-width: 620px;
+}
+
+label {
+    display: grid;
+    gap: 0.45rem;
+    font-weight: 700;
+}
+
+input,
+select,
+textarea,
+button {
+    font: inherit;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border-radius: 16px;
+    border: 1px solid #ccb8a3;
+    background: #fff;
+}
+
+button {
+    border: none;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: #fff;
+    padding: 0.95rem 1.2rem;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.details-grid div,
+.notice,
+.empty-state {
+    background: var(--surface-strong);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 1rem;
+}
+
+.details-grid span {
+    display: block;
+    color: var(--muted);
+    font-size: 0.88rem;
+    margin-bottom: 0.35rem;
+}
+
+.notice.success {
+    background: var(--success);
+}
+
+.notice.warning {
+    background: var(--warning);
+}
+
+.error {
+    color: var(--danger);
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 760px;
+}
+
+th,
+td {
+    padding: 0.9rem;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+}
+
+th {
+    background: #f7eee2;
+}
+
+.steps-list {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.inline-links {
+    margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+    .brand-block,
+    .hero-card,
+    .content-card {
+        border-radius: 22px;
+        padding: 1.2rem;
+    }
+
+    .main-nav a,
+    button {
+        width: 100%;
+        text-align: center;
+    }
+}
